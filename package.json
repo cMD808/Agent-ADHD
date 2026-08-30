@@ -1,0 +1,58 @@
+{
+  "name": "agent-adhd",
+  "version": "0.2.0",
+  "description": "Real-time CLI output parser that strips agentic conversational filler to save tokens and reduce cognitive load.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "agent-adhd": "./dist/cli/index.js",
+    "aadhd": "./dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc --watch -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts",
+    "benchmark": "node dist/cli/index.js --benchmark",
+    "start": "node dist/cli/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "agentic",
+    "cli",
+    "parser",
+    "tokens",
+    "noise-filter",
+    "claude-code",
+    "opencode",
+    "streaming",
+    "productivity",
+    "plugin",
+    "real-time"
+  ],
+  "author": "Agent-ADHD Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
